@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { FileNode } from "./quartz/components/ExplorerNode";
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -8,6 +9,16 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer(),
 }
+
+function countNumOfFiles(node: FileNode): number {
+  if (!node.children.length) return 1;
+  else return node.children.reduce((acc, cur) => acc + countNumOfFiles(cur), 0);
+}
+
+function addNumToFolderName(node: FileNode) { 
+  if (node.children.length > 0) // folder
+    node.displayName = node.displayName + ` (${countNumOfFiles(node)})`;
+};
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
@@ -22,7 +33,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({ mapFn: addNumToFolderName })),
   ],
   right: [
     Component.Graph(),
@@ -39,7 +50,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({ mapFn: addNumToFolderName })),
   ],
   right: [],
 }
