@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{"id":"c69f202180300105","type":"text","text":"# P","x":-261,"y":-43,"width":250,"height":60},
+		{"id":"39a7e0417e21bbfb","type":"file","file":"Study/Algorithm/Brute Force.md","x":-338,"y":157,"width":400,"height":269},
+		{"id":"4a8bd3d0f7b66487","type":"file","file":"Study/Algorithm/Divide & Conquer.md","x":-390,"y":560,"width":504,"height":269},
+		{"id":"38b268f621c2156b","type":"file","file":"Study/Algorithm/Dynamic Programming.md","x":-390,"y":1000,"width":504,"height":240},
+		{"id":"802fa836a56af494","type":"file","file":"Study/Algorithm/Greedy.md","x":-433,"y":1400,"width":590,"height":200},
+		{"id":"ad2cbcfbaed35ced","type":"text","text":"# Class","x":352,"y":-320,"width":250,"height":60,"color":"4"},
+		{"id":"c2f2403a7aeb9032","type":"file","file":"Study/Algorithm/Heuristics.md","x":380,"y":292,"width":395,"height":400},
+		{"id":"9bc5566c544ec11e","type":"text","text":"# NP = 결정 문제","x":322,"y":-43,"width":310,"height":60},
+		{"id":"9293e3062bae26c8","type":"file","file":"Study/Algorithm/Binary Search.md","x":1600,"y":156,"width":420,"height":331},
+		{"id":"4e13f9a313280fef","type":"text","text":"# NP-hard = 최적화 문제","x":883,"y":-43,"width":395,"height":60},
+		{"id":"6b443a36913f3aef","type":"text","text":"# Problem","x":352,"y":-525,"width":250,"height":55,"color":"4"},
+		{"id":"d4c348f05b0ef2fe","type":"text","text":"## 큰 Range/Size","x":1400,"y":-320,"width":250,"height":60},
+		{"id":"7d1d79f1acc71447","type":"text","text":"# Size","x":940,"y":-525,"width":250,"height":60,"color":"4"},
+		{"id":"148242488bd8eb21","type":"file","file":"_attachment/N의 크기에 따른 시간 복잡도.png","x":940,"y":-1060,"width":892,"height":502},
+		{"id":"a3d51826d104da05","type":"file","file":"_attachment/공간 복잡도.png","x":1880,"y":-1060,"width":889,"height":500},
+		{"id":"f7a4a17d6c351bc9","type":"text","text":"## Parametric Search\n📌 최적화 문제를 결정 문제로 바꾸어 푸는 것 ","x":940,"y":252,"width":280,"height":140}
+	],
+	"edges":[
+		{"id":"f3f60193f1de1fbd","fromNode":"ad2cbcfbaed35ced","fromSide":"bottom","toNode":"c69f202180300105","toSide":"top"},
+		{"id":"14918f72ebd89ab8","fromNode":"ad2cbcfbaed35ced","fromSide":"bottom","toNode":"9bc5566c544ec11e","toSide":"top"},
+		{"id":"a692ace576cef482","fromNode":"c69f202180300105","fromSide":"bottom","toNode":"39a7e0417e21bbfb","toSide":"top","label":"Big.O 확인"},
+		{"id":"371b0de9a37ba049","fromNode":"39a7e0417e21bbfb","fromSide":"bottom","toNode":"4a8bd3d0f7b66487","toSide":"top","label":"T(n) = CT(n / C) + ..."},
+		{"id":"dcce3d87a4f59c89","fromNode":"4a8bd3d0f7b66487","fromSide":"bottom","toNode":"38b268f621c2156b","toSide":"top","label":"Subprob Overlapping 존재\n(Optimal Substructure)"},
+		{"id":"a9869095890c364d","fromNode":"38b268f621c2156b","fromSide":"bottom","toNode":"802fa836a56af494","toSide":"top","label":"Ranking fn이 증명됨"},
+		{"id":"872a9ab395ac3a6c","fromNode":"39a7e0417e21bbfb","fromSide":"right","toNode":"c2f2403a7aeb9032","toSide":"left","label":"너무 많은 순열/조합\nPromising\n/Bounding fn"},
+		{"id":"4acb9d78a91cc739","fromNode":"ad2cbcfbaed35ced","fromSide":"bottom","toNode":"4e13f9a313280fef","toSide":"top"},
+		{"id":"c6de1d32be9eef6f","fromNode":"9bc5566c544ec11e","fromSide":"bottom","toNode":"c2f2403a7aeb9032","toSide":"top"},
+		{"id":"e3f9697140064a82","fromNode":"4e13f9a313280fef","fromSide":"bottom","toNode":"f7a4a17d6c351bc9","toSide":"top"},
+		{"id":"920b2f77cde93af2","fromNode":"f7a4a17d6c351bc9","fromSide":"left","toNode":"9bc5566c544ec11e","toSide":"right","label":"최적화 문제\n➡️ Σ 결정 문제"},
+		{"id":"a86fdab953228ffd","fromNode":"9293e3062bae26c8","fromSide":"left","toNode":"f7a4a17d6c351bc9","toSide":"right","label":"bisect_left/right"},
+		{"id":"0753c497ded6f511","fromNode":"7d1d79f1acc71447","fromSide":"right","toNode":"d4c348f05b0ef2fe","toSide":"top"},
+		{"id":"a601c6a2fb63351f","fromNode":"d4c348f05b0ef2fe","fromSide":"bottom","toNode":"9293e3062bae26c8","toSide":"top"},
+		{"id":"3773d2c5d374c6d0","fromNode":"6b443a36913f3aef","fromSide":"bottom","toNode":"ad2cbcfbaed35ced","toSide":"top"},
+		{"id":"633c360c16f0a5d9","fromNode":"6b443a36913f3aef","fromSide":"right","toNode":"7d1d79f1acc71447","toSide":"left"},
+		{"id":"67debcd53f68897b","fromNode":"38b268f621c2156b","fromSide":"right","toNode":"c2f2403a7aeb9032","toSide":"bottom","label":"같은 결과를\n다른 위치에 \n중복 저장하게 됨"}
+	]
+}
