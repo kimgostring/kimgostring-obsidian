@@ -9,3 +9,7 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+content/_attachment/**
+!content/_attachment/**.jpg
+!content/_attachment/**.png
+content/_attachment/**/
