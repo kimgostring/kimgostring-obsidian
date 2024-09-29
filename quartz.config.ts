@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Obsidian Study Backup",
+    pageTitle: "Kimgostring",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,
@@ -20,9 +20,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Nanum Gothic",
-        body: "Nanum Gothic",
-        code: "JetBrains Mono",
+        header: "Noto Sans Korean",
+        body: "Noto Sans Korean",
+        code: "IBM Plex Sans KR",
       },
       colors: {
         lightMode: {
